@@ -7,7 +7,7 @@ export const GeneralInfo = () =>{
   const [isClicked , setIsClicked] = useState(false)
 
   return(
-    <div className="general-info input-group">
+    <div className="input-group">
       <div className="header">
         <div className="header-title">
           <FaUser />
