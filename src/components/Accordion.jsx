@@ -1,33 +1,25 @@
-import { useState } from "react"
-import {FaCaretDown,FaCaretRight,FaSchool } from "react-icons/fa"
+import {FaCaretDown,FaCaretRight} from "react-icons/fa"
 import '../styles/styles.css'
-import { Input } from "./Input"
 
-export const Accordion = ({Icon , Category , title}) =>{
-  const [isClicked , setIsClicked] = useState(false)
-
+export const Accordion = ({Icon , Category , title, handleClick , showTitle}) =>{
+  const isClicked = title === showTitle;
   return(
     <div className="input-group">
-      <div className="header">
+      <div className="header" 
+        onClick={() => {
+          handleClick(title)
+          console.log(`click ${title}`)
+        }}
+      >
         <div className="header-title">
           <Icon />
           <h2>{title}</h2>
         </div>
-      {!isClicked? <FaCaretRight
-        onClick={() => {
-          setIsClicked(!isClicked)
-          console.log('click')
-        }}
-      /> :
-      <FaCaretDown
-        onClick={() => {
-          setIsClicked(!isClicked)
-          console.log('click')
-        }}
-      />}
+      {!isClicked? <FaCaretRight/> :
+      <FaCaretDown/>}
       </div>
 
-        {isClicked? <Category /> : <></>}
+        {isClicked && <Category />}
         
     </div>
   )
