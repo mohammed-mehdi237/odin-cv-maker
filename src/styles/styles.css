@@ -6,6 +6,7 @@
 
 body{
   min-height: 100vh;
+  font-family: sans-serif;
 }
 
 
@@ -35,16 +36,23 @@ body{
 .header{
   display: flex;
   padding: 1rem;
+  padding-left: 0.25rem;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 
 
 .page{
-  min-width: 60%;
+  min-width: 55%;
   box-shadow: 1px 10px 20px black ;
+  background-color: white;
 }
 
 .label-input{
@@ -56,6 +64,7 @@ body{
   display: block;
   margin-bottom: 0.25rem;
   margin-left: 0.5rem;
+  font-weight: bold;
 }
 
 .label-input input{

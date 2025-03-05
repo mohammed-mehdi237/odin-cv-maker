@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { FaArrowRight,FaArrowDown } from "react-icons/fa"
+import {FaCaretDown,FaCaretRight,FaUser } from "react-icons/fa"
 import '../styles/styles.css'
 import { Input } from "./Input"
 
@@ -9,14 +9,17 @@ export const GeneralInfo = () =>{
   return(
     <div className="general-info input-group">
       <div className="header">
-        <h2>General Info</h2>
-      {!isClicked? <FaArrowRight
+        <div className="header-title">
+          <FaUser />
+          <h2>General Info</h2>
+        </div>
+      {!isClicked? <FaCaretRight
         onClick={() => {
           setIsClicked(!isClicked)
           console.log('click')
         }}
       /> :
-      <FaArrowDown
+      <FaCaretDown
         onClick={() => {
           setIsClicked(!isClicked)
           console.log('click')
