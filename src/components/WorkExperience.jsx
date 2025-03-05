@@ -7,8 +7,8 @@ export const WorkExperience = () => {
       <Input title={"Job title"} />
       <Input title={"Company"} />
       <div className="dates">
-      <Input title={"Start Date"} />
-      <Input title={"End Date"} />
+      <Input title={"Start Date"} type="date"/>
+      <Input title={"End Date"} type="date"/>
       </div>
       <Input title={"Description"} />
     </>

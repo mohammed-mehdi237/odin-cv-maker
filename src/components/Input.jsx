@@ -1,13 +1,13 @@
 
 
 
-export const Input = ({title, placeholder}) =>{
+export const Input = ({title, placeholder , type='text'}) =>{
   
 
   return(
     <div className="label-input">
       <label htmlFor="">{title}</label>
-      <input type="text" placeholder={placeholder ? placeholder : title}/>
+      <input type={type} placeholder={placeholder ? placeholder : title}/>
     </div>
   )
 }

@@ -9,8 +9,8 @@ export const Education = () => {
       <Input title={"City"} />
       <Input title={"Country"} />
       <div className="dates">
-        <Input title={"Start Date"} />
-        <Input title={"End Date"} />
+        <Input title={"Start Date"} type="date"/>
+        <Input title={"End Date"} type="date"/>
 
       </div>
     </>
