@@ -1,17 +1,18 @@
+import "../styles/styles.css";
+import { Input } from "./Input";
 
-import '../styles/styles.css'
-import { Input } from "./Input"
+export const Education = () => {
+  return (
+    <>
+      <Input title={"Degree"} />
+      <Input title={"University"} />
+      <Input title={"City"} />
+      <Input title={"Country"} />
+      <div className="dates">
+        <Input title={"Start Date"} />
+        <Input title={"End Date"} />
 
-export const Education = () =>{
-
-  return(
- <>
-        <Input  title={'Full Name'} />
-        <Input  title={'Email'}/>
-        <Input  title={'Phone Number'}/>
-        <Input  title={'Address'}/>
-        </> 
-        
-
-  )
-}
+      </div>
+    </>
+  );
+};
