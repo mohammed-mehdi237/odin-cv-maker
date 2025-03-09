@@ -6,13 +6,12 @@ import { WorkExperience } from "./WorkExperience"
 import { useState } from "react"
 
 
-export const Info = () =>{
+export const Info = ({saveGeneralInfo,info }) =>{
 
   const [showTitle , setShowTitle] = useState('');
 
   const handleAccordionClick = (title) =>{
-    if (title === showTitle) setShowTitle('');
-    else setShowTitle(title);
+    title===showTitle ? setShowTitle('') : setShowTitle(title)
     console.log(`click ${title}`)
   }
 
@@ -24,6 +23,8 @@ export const Info = () =>{
         title={'General Info'}
         handleClick={handleAccordionClick}
         showTitle={showTitle}
+        info={info}
+        handleSave={saveGeneralInfo}
       />
       <Accordion 
         Icon={FaSchool}
@@ -31,6 +32,7 @@ export const Info = () =>{
         title={'Education'}
         handleClick={handleAccordionClick}
         showTitle={showTitle}
+        info={info}
       />
       <Accordion
         Icon={FaBriefcase}
@@ -38,6 +40,7 @@ export const Info = () =>{
         title={'Work Experience'}
         handleClick={handleAccordionClick}
         showTitle={showTitle}
+        info={info}
       />
     </div>
   )

@@ -1,15 +1,12 @@
 import {FaCaretDown,FaCaretRight} from "react-icons/fa"
 import '../styles/styles.css'
 
-export const Accordion = ({Icon , Category , title, handleClick , showTitle}) =>{
+export const Accordion = ({Icon , Category , title, handleClick , showTitle , handleSave,info}) =>{
   const isClicked = title === showTitle;
   return(
     <div className="input-group">
       <div className="header" 
-        onClick={() => {
-          handleClick(title)
-          console.log(`click ${title}`)
-        }}
+        onClick={() =>handleClick(title)}
       >
         <div className="header-title">
           <Icon />
@@ -19,7 +16,11 @@ export const Accordion = ({Icon , Category , title, handleClick , showTitle}) =>
       <FaCaretDown/>}
       </div>
 
-        {isClicked && <Category />}
+        {isClicked && <Category 
+        handleSave={handleSave} 
+        showAccrodion = {()=>handleClick(title)}
+        info={info}
+        />}
         
     </div>
   )

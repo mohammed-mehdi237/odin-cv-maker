@@ -29,9 +29,27 @@ function App() {
     }
   })
 
+
+
+  const saveGeneralInfo = (newname,newemail,newphone,newaddress)=>{
+    if(!newname || !newemail || !newphone || !newaddress) console.log('there is missing information')
+    else{
+    console.log(newname , newemail,newphone , newaddress)
+    setInfo({...info, general:{
+      name:newname,
+      email:newemail,
+      phone:newphone,
+      address:newaddress
+    }});
+    }
+  }
+
   return (
     <div className='main-container'>
-      <Info />
+      <Info 
+        saveGeneralInfo={saveGeneralInfo}
+        info={info}
+      />
       <Page />
     </div>
   )

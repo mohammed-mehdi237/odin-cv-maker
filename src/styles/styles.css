@@ -55,7 +55,7 @@ body{
 
 .page{
   min-width: 55%;
-  box-shadow: 1px 10px 20px black ;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0,0.3) ;
   background-color: white;
 }
 

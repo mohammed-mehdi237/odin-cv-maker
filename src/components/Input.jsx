@@ -12,6 +12,7 @@ export const Input = ({title, placeholder , type='text',state, setState }) =>{
       placeholder={placeholder ? placeholder : title} 
       value={state}
       onChange={e=>setState(e.target.value)}
+      
       />
     </div>
   )
